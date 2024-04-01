@@ -1,0 +1,73 @@
+#crewPage {
+    background-image: url('../../../public/img/crew/background-crew-desktop.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    #crewDescription {
+        margin-left: 8rem;
+        justify-content: space-between;
+        .pageCard {
+            margin-top: 2rem;
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+           
+            #crewCardHeader {
+                
+                height: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                h3, h4 {
+                    text-transform: uppercase;
+                    overflow: visible;
+                }
+                h4 {
+                    @include heading4(#979797);
+                }
+               
+               h3 {
+                white-space: nowrap;
+               }
+            }
+        }
+        nav {
+            display: flex;
+            width: 25%;
+            justify-content: space-between;
+            align-items: flex-end;
+            .navCircle {
+                content: '';
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #ffffff39;
+                cursor: pointer;
+                &:hover {
+                    background-color: $grey-hover;
+                }
+            }
+            .navCircleActive {
+                content: '';
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $white;
+            }
+        }
+       
+        
+    }
+    #crewImg {
+        width: 40%;
+        height: 750px;
+
+        img {
+            position: absolute;
+            bottom: 0;
+        }
+        
+    }
+}
