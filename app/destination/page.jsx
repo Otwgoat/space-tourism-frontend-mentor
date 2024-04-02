@@ -3,6 +3,7 @@ import Image from "next/image";
 import Header from "../src/components/Header";
 import { useEffect, useState } from "react";
 import data from "../src/content/data.json";
+
 export default function Destination() {
   const [destination, setDestination] = useState(data.destinations[0]);
   const [tabIsActive, setTabIsActive] = useState("Moon");

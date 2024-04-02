@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Header from "./src/components/Header";
 
+export const metadata = {
+  title: "Space Tourism - Home",
+  description: "Space tourism home page",
+};
 export default function Home() {
   return (
     <>
