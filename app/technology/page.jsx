@@ -3,8 +3,12 @@ import Image from "next/image";
 import Header from "../src/components/Header";
 import data from "../src/content/data.json";
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export default function Technology() {
+  const isTablet = useMediaQuery({
+    query: "(min-width: 600px) and (max-width: 1300px)",
+  });
   const [technology, setTechnology] = useState(data.technology[0]);
   const [circleIsActive, setCircleIsActive] = useState("Launch Vehicle");
   useEffect(() => {
@@ -60,13 +64,23 @@ export default function Technology() {
               <p className="pageBodyText">{technology.description}</p>
             </div>
           </div>
+
           <div id="technologyImg">
-            <Image
-              src={technology.images.portrait}
-              width={515}
-              height={527}
-              alt={"image of" + technology.name}
-            />
+            {isTablet ? (
+              <Image
+                src={technology.images.landscape}
+                width={768}
+                height={310}
+                alt={"image of " + technology.name}
+              />
+            ) : (
+              <Image
+                src={technology.images.portrait}
+                width={515}
+                height={527}
+                alt={"image of" + technology.name}
+              />
+            )}
           </div>
         </div>
       </main>

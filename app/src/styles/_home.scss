@@ -1,5 +1,5 @@
 #homePage {
-    background-image: url('../../../public/img/background-home-desktop.jpg');
+    background-image: url('/img/background-home-desktop.jpg');
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -79,4 +79,36 @@
                 
             }
     }    
+}
+@media screen and (min-width: 600px) and (max-width: 1300px) {
+    #homePage {
+        background-image: url('/img/background-home-tablet.jpg');
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 8rem;
+        .homePageContent {
+            margin-left: 0px;
+            height: 350px;
+
+        }
+        #homeDescription {
+            margin-left: 0;
+            text-align: center;
+        }
+        #homeButton {
+            padding-top: 3rem;
+            margin-right: 0;
+            animation: none;
+            #exploreButton::after {
+                display: none;
+            }
+        }    
+    }
+    
+}
+@media screen and (max-width: 549px) {
+    #homePage {
+        background-image: url('../../../public/img/background-home-mobile.jpg');
+    }
 }

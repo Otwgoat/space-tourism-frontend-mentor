@@ -1,6 +1,6 @@
 #technologyPage {
     background-color: $primary-color;
-    background-image: url('../../../public/img/technology/background-technology-desktop.jpg');
+    background-image: url('/img/technology/background-technology-desktop.jpg');
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -8,8 +8,6 @@
     width: 100%;
     #technologyContent {
         width: 100%;
-        
-        
         margin-left: 30%;
         nav {
             height: 303px;
@@ -69,10 +67,7 @@
                     h3 {
                         text-transform: uppercase
                     }
-                    
                 }
-            
-            
                 p {
                     @include body($light-blue);
                     width: 444px;
@@ -85,3 +80,59 @@
 
     }
 }
+@media screen and (min-width: 600px) and (max-width: 1300px) {
+    #technologyPage {
+        background-image: url('/img/technology/background-technology-tablet.jpg');
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        #technologyContent {
+            margin: 0px;
+
+            #technologyImg {
+                order: 1;
+                width: 100%;
+                height: 310px;
+                display: flex;
+                justify-content: center;
+                
+            }
+            nav {
+                width: 210px;
+                height: 60px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                order: 2;
+                .navCircle {
+                    width: 60px;
+                    height: 60px;
+                }
+                .navCircleActive {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            #technologyDescription {
+                order: 3;
+                width: 100%;
+                height: 350px;
+                justify-content: center;
+                #technologyCard {
+                    align-items: center;
+                    #technologyCardHeader {
+                        h3 , p{
+                            text-align: center;
+                        }
+                    }
+                    p {
+                        text-align: center;
+                    }
+                }
+            }   
+            
+            
+        }
+    }
+}
+

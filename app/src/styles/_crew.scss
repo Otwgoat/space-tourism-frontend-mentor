@@ -1,5 +1,5 @@
 #crewPage {
-    background-image: url('../../../public/img/crew/background-crew-desktop.jpg');
+    background-image: url('/img/crew/background-crew-desktop.jpg');
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,6 @@
             justify-content: space-evenly;
            
             #crewCardHeader {
-                
                 height: 40%;
                 display: flex;
                 flex-direction: column;
@@ -69,5 +68,59 @@
             bottom: 0;
         }
         
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1300px) {
+    #crewPage {
+        background-image: url('/img/crew/background-crew-tablet.jpg');
+        #crewContent {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            #crewDescription {
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                margin-left: 0;
+                nav {
+                    width: 90px;
+                    display: flex;
+                    margin-bottom: 1rem;
+                }
+                #crewCard {
+                    height: 232px;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 0;  
+                    #crewCardHeader {
+                        height: 50%;
+                        justify-content: space-evenly;
+                        h3, h4 {
+                            display: flex;
+                            justify-content: center;
+                        }
+                        h4 {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                    p {
+                        width: 600px;
+                        height: 50%;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        margin-top: 1rem;
+                    }   
+              
+            }
+           
+        }  
+        #crewImg {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        }
     }
 }

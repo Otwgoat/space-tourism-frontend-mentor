@@ -1,6 +1,6 @@
 
 #destinationPage {
-    background-image: url('../../../public/img/destination/background-destination-desktop.jpg');
+    background-image: url('/img/destination/background-destination-desktop.jpg');
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +54,7 @@
             #lineDecoration {
                 content: '';
                 width: 444px;
-                border-bottom: 1px solid #979797;
+                border-bottom: 1px solid $grey-hover;
             }
             #destinationSpecs {
                 display: flex;
@@ -70,10 +70,62 @@
                     }
                     .psubheading1 {
                         @include subheading1($white);
+                        text-transform: uppercase;
                     }
                 }
             }
         }
+
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1300px) {
+    #destinationPage {
+        background-image: url('/img/destination/background-destination-tablet.jpg');
+        flex-direction: column;
+        justify-content: space-evenly;
+        #destinationContent {
+            
+            #destinationImg {
+                height: 300px;
+                img {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            #destinationDescription {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                nav {
+                    display: flex;
+                    justify-content: center;
+                }
+                #destinationCard {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    h2 {
+                        width: 50%;
+                        text-align: center;
+                    }
+                    .pageBodyText {
+                        width: 573px;
+                        text-align: center;
+                    }
+                }
+                #lineDecoration {
+                    width: 573px;
+                }
+                #destinationSpecs {
+                    justify-content: space-between;
+                    .destinationSpecItem {
+                        align-items: center;
+                    }
+                }
+            }
+           
+        }
+        
 
     }
 }

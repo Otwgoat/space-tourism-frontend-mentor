@@ -52,6 +52,10 @@
         "desktop": {
           "width":  450,
           "height": 600
+        },
+        "tablet": {
+          "width":  440,
+          "height": 572
         }
        
       },
@@ -68,6 +72,10 @@
         "desktop": {
           "width":  400,
           "height": 600
+        },
+        "tablet": {
+          "width":  370,
+          "height": 532
         }
         
       },
@@ -84,6 +92,10 @@
         "desktop" : {
           "width":  500,
           "height": 630
+        },
+        "tablet": {
+          "width":  430,
+          "height": 532
         }
         
       },
@@ -101,6 +113,10 @@
         "desktop": {
           "width":  565,
           "height": 607
+        },
+        "tablet": {
+          "width":  520,
+          "height": 542
         }
        
       },
