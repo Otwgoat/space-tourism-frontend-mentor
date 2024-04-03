@@ -1,0 +1,131 @@
+
+#destinationPage {
+    background-image: url('/img/destination/background-destination-desktop.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+    #destinationContent {
+        #destinationImg {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 40%;
+            height: 100%;
+           
+              
+
+        }
+        .pageDescription{
+          
+            #destinationNav {
+                width: 100%;
+                height: 15%;
+                padding-top: 1rem;
+                #destinationTabs {
+                    width: 285px;
+                    height: 34px;
+                    display: flex;
+                    justify-content: space-between;
+                    .destinationTab {
+                        @include navtext($light-blue);
+                        cursor: pointer;
+                        &:hover {
+                            border-bottom: 3px solid $grey-hover;
+                        }
+                    }
+                    .destinationTabActive {
+                        @include navtext($white);
+                        border-bottom: 3px solid $white;
+                    }
+                }
+            }
+            #destinationCard {
+                height: 85%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h2 {
+                    text-transform: uppercase;
+                }
+            }
+            #lineDecoration {
+                content: '';
+                width: 444px;
+                border-bottom: 1px solid $grey-hover;
+            }
+            #destinationSpecs {
+                display: flex;
+                width: 360px;
+                justify-content: space-between;
+                .destinationSpecItem {
+                    height: 61px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .subheading2 {
+                        @include subheading2($light-blue);
+                    }
+                    .psubheading1 {
+                        @include subheading1($white);
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1300px) {
+    #destinationPage {
+        background-image: url('/img/destination/background-destination-tablet.jpg');
+        flex-direction: column;
+        justify-content: space-evenly;
+        #destinationContent {
+            
+            #destinationImg {
+                height: 300px;
+                img {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            #destinationDescription {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                nav {
+                    display: flex;
+                    justify-content: center;
+                }
+                #destinationCard {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    h2 {
+                        width: 50%;
+                        text-align: center;
+                    }
+                    .pageBodyText {
+                        width: 573px;
+                        text-align: center;
+                    }
+                }
+                #lineDecoration {
+                    width: 573px;
+                }
+                #destinationSpecs {
+                    justify-content: space-between;
+                    .destinationSpecItem {
+                        align-items: center;
+                    }
+                }
+            }
+           
+        }
+        
+
+    }
+}
