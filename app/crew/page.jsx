@@ -37,38 +37,38 @@ export default function Crew() {
               </p>
             </div>
             <nav>
-              <span
+              <div
                 className={
                   circleIsActive === "Douglas Hurley"
                     ? "navCircleActive"
                     : "navCircle"
                 }
                 onClick={() => setCrew(data.crew[0])}
-              ></span>
-              <span
+              ></div>
+              <div
                 className={
                   circleIsActive === "Mark Shuttleworth"
                     ? "navCircleActive"
                     : "navCircle"
                 }
                 onClick={() => setCrew(data.crew[1])}
-              ></span>
-              <span
+              ></div>
+              <div
                 className={
                   circleIsActive === "Victor Glover"
                     ? "navCircleActive"
                     : "navCircle"
                 }
                 onClick={() => setCrew(data.crew[2])}
-              ></span>
-              <span
+              ></div>
+              <div
                 className={
                   circleIsActive === "Anousheh Ansari"
                     ? "navCircleActive"
                     : "navCircle"
                 }
                 onClick={() => setCrew(data.crew[3])}
-              ></span>
+              ></div>
             </nav>
           </div>
           <div id="crewImg">

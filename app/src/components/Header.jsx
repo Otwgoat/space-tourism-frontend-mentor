@@ -1,7 +1,12 @@
 "use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Header({ path }) {
+  const [navMenuActive, setNavMenuActive] = useState(false);
+  useEffect(() => {
+    console.log(navMenuActive);
+  }, [navMenuActive]);
   return (
     <header>
       <div id="logo">
@@ -17,14 +22,31 @@ export default function Header({ path }) {
       </div>
 
       <span id="headerLineDecoration"></span>
-      <div id="hamburgerMenu">
+      <div
+        className="navMenuIcon"
+        id="hamburgerMenu"
+        onClick={() => setNavMenuActive(true)}
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
           <g fill="#D0D6F9" fillRule="evenodd">
             <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
           </g>
         </svg>
       </div>
-      <nav>
+
+      <nav className={navMenuActive ? "navMenuActive" : ""}>
+        <div
+          className="navMenuIcon"
+          id="closeMenu"
+          onClick={() => setNavMenuActive(false)}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21">
+            <g fill="#D0D6F9" fill-rule="evenodd">
+              <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
+              <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" />
+            </g>
+          </svg>
+        </div>
         <div className="links">
           <Link href="/" className={path === "home" ? "navLinkActive" : ""}>
             <span>00</span>HOME
