@@ -9,6 +9,7 @@ export default function Crew() {
   const isTablet = useMediaQuery({
     query: "(min-width: 600px) and (max-width: 1300px)",
   });
+  const isMobile = useMediaQuery({ query: "(max-width: 599px)" });
   const [crew, setCrew] = useState(data.crew[0]);
   const [circleIsActive, setCircleIsActive] = useState("Douglas Hurley");
   useEffect(() => {
@@ -74,19 +75,27 @@ export default function Crew() {
           <div id="crewImg">
             {isTablet ? (
               <Image
-                src={crew && crew.images.webp}
+                src={crew && crew.images.png}
                 width={crew.imagesSizes.tablet.width}
                 height={crew.imagesSizes.tablet.height}
-                alt="photo of a man"
+                alt={"photo of " + crew && crew.name}
               />
             ) : (
               <Image
                 src={crew && crew.images.png}
                 width={crew.imagesSizes.desktop.width}
                 height={crew.imagesSizes.desktop.height}
-                alt="photo of a man"
+                alt={"photo of " + crew && crew.name}
               />
             )}
+          </div>
+          <div id="crewImgMobile">
+            <Image
+              src={crew && crew.images.png}
+              width={crew.imagesSizes.mobile.width}
+              height={222}
+              alt={"photo of " + crew && crew.name}
+            />
           </div>
         </div>
       </main>

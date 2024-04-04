@@ -56,7 +56,11 @@
         "tablet": {
           "width":  440,
           "height": 572
+        },
+        "mobile": {
+          "width": 165
         }
+
        
       },
       "role": "Commander",
@@ -76,6 +80,9 @@
         "tablet": {
           "width":  370,
           "height": 532
+        },
+        "mobile": {
+          "width": 154 
         }
         
       },
@@ -96,6 +103,9 @@
         "tablet": {
           "width":  430,
           "height": 532
+        },
+        "mobile": {
+          "width": 180
         }
         
       },
@@ -117,6 +127,9 @@
         "tablet": {
           "width":  520,
           "height": 542
+        },
+        "mobile": {
+          "width": 215
         }
        
       },

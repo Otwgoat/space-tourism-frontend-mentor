@@ -154,6 +154,9 @@ header {
                     span {
                         width: 20px;
                     }
+                    &:hover{
+                        border-bottom: none;
+                    }
                 }
                 .navLinkActive {
                     margin-right: 0;

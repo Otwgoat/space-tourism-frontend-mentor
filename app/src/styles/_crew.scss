@@ -69,6 +69,9 @@
         }
         
     }
+    .crewImgMobile {
+        display: none;
+    }
 }
 @media screen and (min-width: 600px) and (max-width: 1300px) {
     #crewPage {
@@ -125,5 +128,62 @@
             
         }
         }
+    }
+}
+@media screen and (max-width: 599px) {
+    #crewPage {
+        background-image: url('/img/crew/background-crew-mobile.jpg');
+        justify-content: center;
+        #crewContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            #crewImg {
+                display: none;
+            }
+            #crewImgMobile {
+                order: 1;
+                width: 90%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                border-bottom: 1px solid $grey-hover;
+            }
+            #crewDescription {
+                order: 2;
+                width: 100%;
+                margin-left: 0;
+                justify-content: space-evenly;
+                align-items: center;
+                #crewCard {
+                    order: 2;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 0;
+                    #crewCardHeader {
+                        h4 {
+                            text-align: center;
+                            font-size: 16px;
+                        }
+                        h3 {
+                            font-size: 26px;
+                        }
+                    }
+                    #crewBodyText {
+                        font-size: 15px;
+                        width: 327px;
+                        text-align: center;
+                    }
+                   
+                }
+                nav {
+                    margin-top: 1rem;
+                    align-items: center;
+                    order: 1;
+                }
+               
+            }
+        }
+
     }
 }
