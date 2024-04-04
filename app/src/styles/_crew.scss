@@ -87,6 +87,7 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-left: 0;
+                
                
                 nav {
                     width: 90px;
@@ -99,7 +100,8 @@
                     height: 232px;
                     display: flex;
                     align-items: center;
-                    margin-top: 0;  
+                    margin-top: 0; 
+                    margin-bottom: 1rem; 
                     #crewCardHeader {
                         height: 50%;
                         justify-content: space-evenly;
