@@ -135,4 +135,16 @@
         }
     }
 }
+@media  screen and (max-width: 599px) {
+    #technologyPage {
+        background-image: url('/img/technology/background-technology-mobile.jpg');
+        justify-content: center;
+        #technologyContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+    
+}
 
