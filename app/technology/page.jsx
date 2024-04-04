@@ -7,7 +7,7 @@ import { useMediaQuery } from "react-responsive";
 
 export default function Technology() {
   const isTablet = useMediaQuery({
-    query: "(min-width: 600px) and (max-width: 1300px)",
+    query: "(max-width: 1300px)",
   });
   const [technology, setTechnology] = useState(data.technology[0]);
   const [circleIsActive, setCircleIsActive] = useState("Launch Vehicle");
