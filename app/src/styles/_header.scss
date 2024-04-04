@@ -78,7 +78,9 @@ header {
                         border-bottom: none;
                     }
                 }
-                
+                .navLinkActive {
+                    border-bottom: 3px solid $white;
+                }
             }
         }
     }
