@@ -3,8 +3,10 @@ import Image from "next/image";
 import Header from "../src/components/Header";
 import { useEffect, useState } from "react";
 import data from "../src/content/data.json";
+import { useMediaQuery } from "react-responsive";
 
 export default function Destination() {
+  const isMobile = useMediaQuery({ query: "(max-width: 599px)" });
   const [destination, setDestination] = useState(data.destinations[0]);
   const [tabIsActive, setTabIsActive] = useState("Moon");
   useEffect(() => {
@@ -21,7 +23,7 @@ export default function Destination() {
           </h5>
         </div>
         <div className="pageContent" id="destinationContent">
-          <div id="destinationImg">
+          <div id="destinationImg" className="destinationImgMobile">
             <Image
               src={destination && destination.images.png}
               width={445}

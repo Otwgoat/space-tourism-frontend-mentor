@@ -95,8 +95,20 @@ html {
                     height: 5%;
                     margin-left: 3rem;
                     margin-top: 3rem;
-                    
                     align-items: flex-end;
+                }
+            }
+            @media screen and (max-width: 599px) {
+                #titleBanner {
+                    height: 3rem;
+                    justify-content: center;
+                    margin-left: 0;
+                    margin-top: 0;
+                    margin-bottom: 1rem;
+                    h5 {
+                        font-size: 16px;
+                    }
+                    
                 }
             }
             .pageContent {
