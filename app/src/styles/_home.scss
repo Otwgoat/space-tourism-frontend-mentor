@@ -107,8 +107,55 @@
     }
     
 }
-@media screen and (max-width: 549px) {
+@media screen and (max-width: 599px) {
     #homePage {
-        background-image: url('../../../public/img/background-home-mobile.jpg');
+        background-image: url('/img/background-home-mobile.jpg');
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .homePageContent {
+            width: 100%;
+            margin: 0;
+        }
+        #homeDescription {
+            width: 100%;
+            margin-left: 0;
+            align-items: center;
+            justify-content: flex-end;
+            
+            h1, h5, p {
+                padding-top: 1rem;
+            }
+            h1 {
+                
+                font-size: 80px;
+            }
+            h5 {
+                font-size: 16px;
+            }
+            p {
+                width: 327px;
+                font-size: 15px;
+                text-align: center;
+            }
+
+        }
+        #homeButton {
+            
+            margin-right: 0;
+            animation: none;
+            align-items: center;
+            #exploreButton {
+                width: 150px;
+                height: 150px;
+                a{
+                    font-size: 20px;
+                }
+            }
+            #exploreButton::after {
+                display: none;
+            }
+        }   
+       
     }
 }

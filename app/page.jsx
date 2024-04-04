@@ -1,14 +1,14 @@
+"use client";
 import Link from "next/link";
 import Header from "./src/components/Header";
+import { useMediaQuery } from "react-responsive";
 
-export const metadata = {
-  title: "Space Tourism - Home",
-  description: "Space tourism home page",
-};
 export default function Home() {
+  const isMobile = useMediaQuery({ query: "max-width: 600px" });
   return (
     <>
-      <Header path="home" />
+      {isMobile ? "" : <Header path="home" />}
+
       <main id="homePage">
         <div className="homePageContent" id="homeDescription">
           <h5>SO, YOU WANT TO TRAVEL TO</h5>
